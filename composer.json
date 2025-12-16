@@ -1,0 +1,27 @@
+{
+    "name": "vendor/starterkitbyprofessor",
+    "description": "Registration, Login, No-spatie, Bootstrap5.3, jquery, bootstrap icons,sweetalert, navs and manymore loaded",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Vendor\\StarterKit\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Prof.Krishna"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vendor\\StarterKit\\starterkitServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": ">=8.1",
+        "laravel/framework": "^10.0|^11.0"
+    }
+}
