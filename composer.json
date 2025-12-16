@@ -16,7 +16,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Vendor\\StarterKit\\starterkitServiceProvider"
+                "Krishna892289\\StarterKit\\starterkitServiceProvider"
             ]
         }
     },
