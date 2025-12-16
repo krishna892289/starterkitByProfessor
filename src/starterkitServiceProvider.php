@@ -3,7 +3,7 @@
 namespace Krishna892289\StarterKit;
 
 use Illuminate\Support\ServiceProvider;
-use Vendor\StarterKit\Console\InstallCommand;
+use Krishna892289\StarterKit\Console\InstallCommand;
 
 class starterkitServiceProvider extends ServiceProvider
 {

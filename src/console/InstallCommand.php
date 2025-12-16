@@ -1,6 +1,6 @@
 <?php
 
-namespace Vendor\StarterKit\Console;
+namespace Krishna892289\StarterKit\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
