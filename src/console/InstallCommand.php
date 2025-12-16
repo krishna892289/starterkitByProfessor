@@ -20,11 +20,21 @@ class InstallCommand extends Command
         $this->info('Starter Kit installed successfully.');
     }
 
-    protected function copyStubs()
+    protected function copyStubs(): void
     {
         File::copyDirectory(
-            __DIR__.'/../../stubs',
-            base_path()
+            __DIR__.'/../../stubs/app',
+            app_path()
+        );
+
+        File::copyDirectory(
+            __DIR__.'/../../stubs/resources',
+            resource_path()
+        );
+
+        File::copyDirectory(
+            __DIR__.'/../../stubs/routes',
+            base_path('routes')
         );
     }
 
