@@ -1,6 +1,6 @@
 <?php
 
-namespace Vendor\StarterKit;
+namespace Krishna892289\StarterKit;
 
 use Illuminate\Support\ServiceProvider;
 use Vendor\StarterKit\Console\InstallCommand;
