@@ -22,21 +22,29 @@ class InstallCommand extends Command
 
     protected function copyStubs(): void
     {
+        $base = dirname(__DIR__, 2); // points to package root
+
         File::copyDirectory(
-            __DIR__.'/../../stubs/app',
+            $base.'/stubs/app',
             app_path()
         );
 
         File::copyDirectory(
-            __DIR__.'/../../stubs/resources',
+            $base.'/stubs/resources',
             resource_path()
         );
 
         File::copyDirectory(
-            __DIR__.'/../../stubs/routes',
+            $base.'/stubs/routes',
             base_path('routes')
         );
+
+        File::copyDirectory(
+            $base.'/stubs/migrations',
+            database_path('migrations')
+        );
     }
+
 
     protected function runMigrations()
     {
