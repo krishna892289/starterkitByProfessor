@@ -22,7 +22,7 @@ class InstallCommand extends Command
 
     protected function copyStubs(): void
     {
-        $base = dirname(__DIR__, 2); // points to package root
+        $base = dirname(__DIR__, 2);
 
         File::copyDirectory(
             $base.'/stubs/app',
