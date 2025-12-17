@@ -1,4 +1,4 @@
 @extends('layout')
 @section('hero')
-    NOTHING IS HERE
+    admin
 @endsection
