@@ -43,6 +43,10 @@ class InstallCommand extends Command
             $base.'/stubs/migrations',
             database_path('migrations')
         );
+
+        File::copyDirectory(
+            $base.'/stubs/bootstrap', base_path('bootstrap')
+        );
     }
 
 
