@@ -48,8 +48,8 @@ This kit focuses on **clean, readable code** using pure Blade, Laravel's default
 
 - PHP >= 8.1
 - Composer
-- Laravel 10.x or 11.x (tested on both)
-- MySQL / PostgreSQL / SQLite
+- Laravel 12.x
+- MySQL
 
 ### Installation
 
@@ -100,3 +100,4 @@ This project is open-sourced under the MIT License.
 Author
 Created with ❤️ by Krishna (@krishna892289 on GitHub)
 Thank you for using Starter Kit by Professor! If you find it helpful, please give it a ⭐ on GitHub.
+
