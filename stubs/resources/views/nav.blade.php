@@ -13,7 +13,7 @@
                 </li>
 
                 @auth
-                    @if (auth()->user()->role == 1)
+                    @if (auth()->user()->role == 'admin')
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
@@ -25,7 +25,19 @@
                             </ul>
                         </li>
                     @endif
-                    @if (auth()->user()->role == 2)
+                    @if (auth()->user()->role == 'manager')
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Products
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Add Products</a></li>
+                                <li><a class="dropdown-item" href="#">List Products</a></li>
+                            </ul>
+                        </li>
+                    @endif
+                    @if (auth()->user()->role == 'user')
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">

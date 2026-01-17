@@ -30,4 +30,8 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/user/dashboard', [UserController::class, 'dashboard'])->name('user_dashboard');
     });
 
+    Route::middleware(['role:admin,manager'])->group(function(){
+        //
+    });
+
 });

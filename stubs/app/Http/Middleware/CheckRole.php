@@ -15,16 +15,17 @@ class CheckRole
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      * @param  string $role  // We add this third parameter
      */
-    public function handle(Request $request, Closure $next, string $role): Response
-    {
-        if (!Auth::check()) {
-            return redirect('/login');
-        }
 
-        if (Auth::user()->role !== $role) {
-            abort(403, 'Unauthorized action.');
-        }
+    public function handle(Request $request, Closure $next, ...$roles): Response
+        {
+            if (!Auth::check()) {
+                abort(401);
+            }
 
-        return $next($request);
-    }
+            if (!in_array(Auth::user()->role, $roles)) {
+                abort(403, Auth::user()->role . ' not allowed');
+            }
+
+            return $next($request);
+        }
 }
